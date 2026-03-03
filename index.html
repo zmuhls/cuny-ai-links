@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CUNY AI Linktree</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0a0a0a;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 40px 24px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 12px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .links a {
+      display: block;
+      padding: 18px 24px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+    .links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.16);
+      transform: translateY(-2px);
+    }
+
+    .links a:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="CUNY AI Lab" class="logo">
+    <h1>CUNY AI Linktree</h1>
+    <div class="links">
+      <a href="https://aitoolkit.commons.gc.cuny.edu/" target="_blank" rel="noopener">Teach@CUNY AI Toolkit</a>
+      <a href="https://criticalai.commons.gc.cuny.edu/" target="_blank" rel="noopener">Critical AI Literacy Institute</a>
+      <a href="https://ailab.gc.cuny.edu/" target="_blank" rel="noopener">CUNY AI Lab</a>
+    </div>
+    <img src="tlc-logo.png" alt="Teaching and Learning Center" class="logo">
+  </div>
+</body>
+</html>
