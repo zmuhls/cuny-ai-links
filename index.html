@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CUNY AI Linktree</title>
+  <meta name="description" content="Quick links to CUNY AI initiatives: Teach@CUNY AI Toolkit, Critical AI Literacy Institute, and CUNY AI Lab.">
+  <meta property="og:title" content="CUNY AI Linktree">
+  <meta property="og:description" content="Quick links to CUNY AI initiatives: Teach@CUNY AI Toolkit, Critical AI Literacy Institute, and CUNY AI Lab.">
+  <meta property="og:image" content="tlc-logo.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CUNY AI Linktree">
+  <meta name="twitter:description" content="Quick links to CUNY AI initiatives: Teach@CUNY AI Toolkit, Critical AI Literacy Institute, and CUNY AI Lab.">
+  <link rel="icon" type="image/png" href="tlc-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,6 +37,17 @@
       color: #fff;
     }
 
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .container {
       display: flex;
       flex-direction: column;
@@ -38,24 +58,13 @@
       max-width: 480px;
     }
 
-    .logo {
-      width: 200px;
-      height: auto;
-      margin-bottom: 4px;
-    }
-
-    .logo-lg {
-      width: 280px;
-      height: auto;
-      margin-bottom: 4px;
-    }
-
     h1 {
       font-size: 1.6rem;
       font-weight: 600;
       letter-spacing: 0.06em;
       color: rgba(255, 255, 255, 0.85);
       margin-bottom: 8px;
+      animation: fadeUp 0.5s ease both;
     }
 
     .links {
@@ -79,17 +88,51 @@
       font-size: 0.95rem;
       font-weight: 500;
       letter-spacing: 0.01em;
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      animation: fadeUp 0.5s ease both;
     }
+
+    .links a:nth-child(1) { animation-delay: 0.1s; }
+    .links a:nth-child(2) { animation-delay: 0.2s; }
+    .links a:nth-child(3) { animation-delay: 0.3s; }
 
     .links a:hover {
       background: rgba(255, 255, 255, 0.07);
       border-color: rgba(255, 255, 255, 0.16);
       transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.06);
     }
 
     .links a:active {
       transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin-top: 8px;
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      animation: fadeUp 0.5s ease 0.4s both;
+    }
+
+    .footer-logos img {
+      height: auto;
+    }
+
+    .footer-logos .logo-lg {
+      width: 200px;
+    }
+
+    .footer-logos .logo {
+      width: 140px;
     }
   </style>
 </head>
@@ -97,12 +140,15 @@
   <div class="container">
     <h1>CUNY AI Linktree</h1>
     <div class="links">
+      <a href="https://ailab.gc.cuny.edu/" target="_blank" rel="noopener">CUNY AI Lab</a>
       <a href="https://aitoolkit.commons.gc.cuny.edu/" target="_blank" rel="noopener">Teach@CUNY AI Toolkit</a>
       <a href="https://criticalai.commons.gc.cuny.edu/" target="_blank" rel="noopener">Critical AI Literacy Institute</a>
-      <a href="https://ailab.gc.cuny.edu/" target="_blank" rel="noopener">CUNY AI Lab</a>
     </div>
-    <img src="logo.png" alt="CUNY AI Lab" class="logo-lg">
-    <img src="tlc-logo.png" alt="Teaching and Learning Center" class="logo">
+    <div class="divider"></div>
+    <div class="footer-logos">
+      <img src="logo.png" alt="CUNY AI Lab" class="logo-lg">
+      <img src="tlc-logo.png" alt="Teaching and Learning Center" class="logo">
+    </div>
   </div>
 </body>
 </html>
